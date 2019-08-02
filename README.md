@@ -1,7 +1,6 @@
 # Grommet Redux Pattern 
 
-A simple email SignIn form to save email in sendgrid,
-A winning page to randomly select a winner by email from sendgrid.
+A simple SignIn form using redux
 
 ### Steps to install
 - Clone the repo `https://github.com/britt6612/ReduxPattern.git`
