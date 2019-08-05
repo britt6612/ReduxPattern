@@ -1,6 +1,6 @@
-const SET_LOGIN_PENDING = "SET_LOGIN_PENDING";
-const SET_LOGIN_SUCCESS = "SET_LOGIN_SUCCESS";
-const SET_LOGIN_ERROR = "SET_LOGIN_ERROR";
+const SET_LOGIN_PENDING = 'SET_LOGIN_PENDING';
+const SET_LOGIN_SUCCESS = 'SET_LOGIN_SUCCESS';
+const SET_LOGIN_ERROR = 'SET_LOGIN_ERROR';
 
 export function login(email, password) {
   return dispatch => {
@@ -8,7 +8,7 @@ export function login(email, password) {
     dispatch(setLoginSuccess(false));
     dispatch(setLoginError(null));
 
-    callLoginApi(email, password, error => {
+    callFakeLoginApi(email, password, error => {
       dispatch(setLoginPending(false));
       if (!error) {
         dispatch(setLoginSuccess(true));
@@ -22,32 +22,32 @@ export function login(email, password) {
 function setLoginPending(isLoginPending) {
   return {
     type: SET_LOGIN_PENDING,
-    isLoginPending
+    isLoginPending,
   };
 }
 
 function setLoginSuccess(isLoginSuccess) {
   return {
     type: SET_LOGIN_SUCCESS,
-    isLoginSuccess
+    isLoginSuccess,
   };
 }
 
 function setLoginError(loginError) {
   return {
     type: SET_LOGIN_ERROR,
-    loginError
+    loginError,
   };
 }
 
-function callLoginApi(email, password, callback) {
+function callFakeLoginApi(email, password, callback) {
   setTimeout(() => {
-    if (email === "admin@admin.com" && password === "admin") {
+    if (email === 'admin@admin.com' && password === 'admin') {
       return callback(null);
     } else if (email.length === 0 || password.length === 0) {
-      return callback(new Error("Cannot be blank"));
+      return callback(new Error('Cannot be blank'));
     } else {
-      return callback(new Error("Invalid credentials"));
+      return callback(new Error('Invalid credentials'));
     }
   }, 2000);
 }
@@ -56,24 +56,24 @@ export default function reducer(
   state = {
     isLoginSuccess: false,
     isLoginPending: false,
-    loginError: null
+    loginError: null,
   },
-  action
+  action,
 ) {
   switch (action.type) {
     case SET_LOGIN_PENDING:
       return Object.assign({}, state, {
-        isLoginPending: action.isLoginPending
+        isLoginPending: action.isLoginPending,
       });
 
     case SET_LOGIN_SUCCESS:
       return Object.assign({}, state, {
-        isLoginSuccess: action.isLoginSuccess
+        isLoginSuccess: action.isLoginSuccess,
       });
 
     case SET_LOGIN_ERROR:
       return Object.assign({}, state, {
-        loginError: action.loginError
+        loginError: action.loginError,
       });
 
     default:
