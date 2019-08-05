@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { login } from './reducer';
-import { Header, Welcome, } from '../../components/index';
+import { Header, Welcome } from '../../components/index';
 import LoginForm from '../../components/LoginForm/Login';
 import { Box } from 'grommet';
 
@@ -27,8 +27,8 @@ export class Login extends Component {
   }
 
   handleChange(e) {
-    this.setState({email:  e.target.email })
-    this.setState({password: e.target.password})
+    this.setState({ email: e.target.email });
+    this.setState({ password: e.target.password });
   }
 
   render() {
@@ -42,20 +42,20 @@ export class Login extends Component {
       >
         <Header />
         <Box fill align="center" flex="grow" justify="center">
-            {isLoginSuccess ? (
-              <Welcome />
-            ) : (
-              <LoginForm
-                email={email}
-                password={password}
-                onSubmit={this.onSubmit}
-                onChange={this.handleChange}
-                isLoginPending={isLoginPending}
-                loginError={loginError}
-              ></LoginForm>            
-            )}
-          </Box>
+          {isLoginSuccess ? (
+            <Welcome />
+          ) : (
+            <LoginForm
+              email={email}
+              password={password}
+              onSubmit={this.onSubmit}
+              onChange={this.handleChange}
+              isLoginPending={isLoginPending}
+              loginError={loginError}
+            ></LoginForm>
+          )}
         </Box>
+      </Box>
     );
   }
 }
