@@ -6,8 +6,7 @@ export const Login = ({
   email,
   password,
   onSubmit,
-  onEmailChange,
-  onPassChange,
+  onChange,
   isLoginPending,
   loginError,
 }) => (
@@ -24,7 +23,7 @@ export const Login = ({
           <TextInput
             type="email"
             name="email"
-            onChange={onEmailChange}
+            onChange={onChange}
             value={email}
           />
         </FormField>
@@ -32,7 +31,7 @@ export const Login = ({
           <TextInput
             type="password"
             name="password"
-            onChange={onPassChange}
+            onChange={onChange}
             value={password}
           />
         </FormField>
