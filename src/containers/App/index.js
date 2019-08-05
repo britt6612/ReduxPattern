@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Router, Switch, Route } from "react-router-dom";
-import { createBrowserHistory } from "history";
-import { Box, Paragraph } from "grommet";
-import { grommet } from "grommet/themes";
-import loginRedux from "../loginRedux/index";
-import { StyledApp } from "./styles";
+import React, { Component } from 'react';
+import { Router, Switch, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { Box, Paragraph } from 'grommet';
+import { grommet } from 'grommet/themes';
+import loginRedux from '../loginRedux/index';
+import { StyledApp } from './styles';
 
 export const history = createBrowserHistory();
 

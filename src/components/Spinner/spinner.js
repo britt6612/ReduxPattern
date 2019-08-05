@@ -1,5 +1,5 @@
-import React from "react";
-import { Box } from "grommet";
+import React from 'react';
+import { Box } from 'grommet';
 
 const spinning = (
   <svg
