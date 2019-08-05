@@ -3,11 +3,12 @@ import { Box, Heading, Paragraph, Text } from 'grommet';
 
 const Welcome = () => {
   return (
-    <Box flex fill>
+    <Box justify='center'>
       <Box
         background={{ color: 'light-1', opacity: '0.9' }}
         round="small"
         align="center"
+        pad='large'
       >
         <Box>
           <Heading level={1} size="large" align="center" margin="none">

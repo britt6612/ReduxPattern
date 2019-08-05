@@ -13,7 +13,9 @@ export class Login extends Component {
       password: '',
     };
     this.onSubmit = this.onSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePassChange = this.handlePassChange.bind(this);
+
   }
 
   onSubmit(e) {
@@ -26,9 +28,12 @@ export class Login extends Component {
     });
   }
 
-  handleChange(e) {
-    this.setState({ email: e.target.email });
-    this.setState({ password: e.target.password });
+  handleEmailChange(e) {
+    this.setState({ email: e.target.value });
+  }
+
+  handlePassChange(e) {
+    this.setState({ password: e.target.value });
   }
 
   render() {
@@ -49,7 +54,8 @@ export class Login extends Component {
               email={email}
               password={password}
               onSubmit={this.onSubmit}
-              onChange={this.handleChange}
+              onEmailChange={this.handleEmailChange}
+              onPassChange={this.handlePassChange}
               isLoginPending={isLoginPending}
               loginError={loginError}
             ></LoginForm>
