@@ -14,12 +14,12 @@ const Welcome = () => {
           <Heading level={1} size="large" align="center" margin="none">
             Welcome
           </Heading>
-          <Text>What is Lorem Ipsum?</Text>
+          <Text>Redux</Text>
           <Paragraph>
-            Lorem Ipsum is simply dummy text of the pri typesetting
-            industry.Lorem Ipsum has b dustry's standard dummy text ever since,
-            when an unknown printer took a galley of type and scrambled it to
-            make a type specimen book.It has survived not
+           Redux is a great way to manage state. When writing an application that 
+           can become very complex to manage state. Redux is a great state manager 
+           tool. The Redux dev tools are great, It allows devs to visualize the state
+           changes.
           </Paragraph>
         </Box>
       </Box>

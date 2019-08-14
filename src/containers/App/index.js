@@ -3,7 +3,7 @@ import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { Box, Paragraph } from 'grommet';
 import { grommet } from 'grommet/themes';
-import loginRedux from '../loginRedux/index';
+import loginRedux from '../../loginRedux';
 import { StyledApp } from './styles';
 
 export const history = createBrowserHistory();
